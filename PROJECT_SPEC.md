@@ -2,51 +2,43 @@
 
 ## 1. Résumé
 
-Le projet est un socle d’application web construit avec TanStack Start, React et TypeScript. Il doit servir de base à un produit dont le besoin métier reste à préciser.
+**To-Do-List-en-HTML-CSS-et-JavaScript** est une application de liste de tâches : l'utilisateur ajoute ses tâches du quotidien, les coche quand elles sont terminées, les supprime et filtre la liste. Les tâches sont sauvegardées automatiquement dans le navigateur (localStorage), sans compte ni serveur.
 
-## 2. Objectif actuel
+L'application est réalisée avec HTML, CSS et JavaScript côté navigateur, sur le socle TanStack Start (React, TypeScript, Tailwind CSS).
 
-Fournir une fondation technique claire, maintenable et prête à accueillir les premiers parcours utilisateur sans imposer de fonctionnalités non validées.
+## 2. Objectif
 
-## 3. Périmètre initial
+Offrir un moyen immédiat et sans inscription de noter et suivre ses tâches du quotidien, avec une interface claire en un seul écran.
+
+## 3. Périmètre
 
 ### Inclus
 
-- Une application web rendue avec React et TanStack Start.
-- Une navigation gérée par TanStack Router.
-- Un système de styles basé sur Tailwind CSS et des variables de thème sémantiques.
-- Une structure compatible avec des pages, des appels serveur et une gestion de données ultérieurs.
-- Des commandes de développement, de contrôle et de génération de production.
+- Ajout d'une tâche (champ de saisie, bouton « Ajouter », touche Entrée).
+- Bascule « à faire / terminée » sur chaque tâche (texte barré quand terminée).
+- Suppression d'une tâche individuelle.
+- Filtres : *Toutes*, *À faire*, *Terminées*.
+- Effacement groupé des tâches terminées.
+- Compteur de tâches restantes et état vide accompagné.
+- Persistance automatique dans le navigateur (localStorage).
 
-### Non défini à ce stade
+### Hors périmètre (à ce stade)
 
-- Le nom du produit et son identité visuelle.
-- Le public cible et le problème métier traité.
-- Les fonctionnalités et parcours prioritaires.
-- L’authentification, la persistance de données et les services externes.
-- Le modèle économique et les règles métier.
+- Comptes utilisateurs et authentification.
+- Synchronisation entre appareils (base de données, serveur).
+- Échéances, rappels, priorités ou listes multiples.
+- Partage ou collaboration.
 
 ## 4. Exigences techniques
 
-- Conserver TypeScript pour la sécurité des types.
-- Utiliser le système de routes existant de TanStack Start.
-- Concevoir les écrans pour les formats mobiles et ordinateur.
-- Centraliser les couleurs, espacements et états visuels dans le thème global.
-- Préserver l’accessibilité des contenus et des commandes interactives.
-- Ne jamais inclure de clé privée ou de secret dans le dépôt.
+- TypeScript pour la sécurité des types ; interface unique sur la route d'accueil.
+- Interface responsive (mobile et ordinateur) et accessible (libellés explicites, navigation clavier).
+- Couleurs, espacements et états visuels centralisés dans le thème global (variables sémantiques).
+- Aucune clé privée ni secret dans le dépôt ; aucune donnée personnelle envoyée à un serveur.
 
-## 5. Critères d’acceptation du socle
+## 5. Critères d'acceptation
 
-- Les dépendances s’installent avec `bun install`.
-- L’application démarre avec `bun run dev`.
-- La version de production est générée avec `bun run build`.
-- Chaque nouvelle page possède un titre et une description propres.
-- Le futur écran d’accueil remplace entièrement le modèle vierge actuel.
-
-## 6. Prochaines décisions produit
-
-1. Définir le nom et la proposition de valeur.
-2. Identifier les utilisateurs cibles et leur besoin principal.
-3. Décrire le premier parcours utilisateur à livrer.
-4. Lister les données à conserver et les éventuelles connexions externes.
-5. Valider une direction visuelle avant la réalisation des écrans.
+- Les dépendances s'installent avec `bun install` ; l'application démarre avec `bun run dev`.
+- Une tâche ajoutée apparaît immédiatement dans la liste et survit au rechargement de la page.
+- Le cochage, la suppression, les filtres et l'effacement des terminées fonctionnent sans erreur.
+- Chaque page possède un titre et une description propres.
